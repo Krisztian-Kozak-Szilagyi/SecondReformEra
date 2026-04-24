@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Raleway | Raleway | Raleway | Raleway | Raleway | Raleway | Raleway | Raleway | Raleway | Raleway | -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">    <!-- Montserrat | Montserrat | Montserrat | Montserrat | Montserrat | -->
+    <!-- Noto Sans Japanese | Noto Sans Japanese | Noto Sans Japanese | Noto Sans Japanese | Noto Sans Japanese | -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="style.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second Reform Era</title>
+</head>
+
+<body>
+    
+    <a href="#" class="fingerprint-reader-anchor"><img class="fingerprint-reader" src="images/fingerprint.png" alt="fingerprint reader icon"></a>
+
+    <header class="top-menu" id="top-main-menu">
+        <a href="index.html"><img class="logo-img" src="images/logo-01.png" alt="Second Reform Era logo"></a>
+        <ul class="header-nav">
+            <li>
+                <a href="#">2026 fundamentals</a>
+            </li>
+            <li>
+                <a href="#">New humanism</a>
+            </li>
+            <li>
+                <a href="#">2REmpathy</a>
+            </li>
+            <li>
+                <a href="#">Our Causes</a>
+            </li>
+        </ul>
+        <button class="call-to-action-button login-with-id" id="login-with-id">Login with ID</button>
+        <div class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <section class="login-section-logged-out">
+        <div class="login-form-container">
+            <h1 class="call-to-login">Login with your national ID</h1>
+            <form action="/login" method="POST">
+                <input type="text" id="national-ID" name="national-ID" class="login-input-field" placeholder="National ID" required>
+                <input type="password" name="password" id="password" class="login-input-field" placeholder="Password" required>
+                <button type="submit" class="login-with-id landing-login-button">Login</button>
+            </form>
+        </div>
+        <img src="images/news-politics.png" class="login-graphics" alt="graphics design, woman reading the news">
+    </section>
+
+    <section class="vote-section-pinned">
+        <div class="vote-section-container">
+            <h1 class="vote-title">Petition</h1>
+            <p class="vote-topic">Petition for the resignation of President of the Republic Nusan Saatz!</p>
+            <a href="#" class="petition-button">VOTE</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="legal-list">
+            <a href="#">Legal Notice</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Cookie Policy</a>
+            <a href="#">Open Data</a>
+            <a href="#">Citizen Rights</a>
+            <a href="#">Accessabiltiy Statement</a>
+        </div>
+    </footer>
+
+</body>
+
+</html>
