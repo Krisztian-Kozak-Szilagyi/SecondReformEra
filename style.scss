@@ -1,0 +1,282 @@
+/* COLOR DESIGNS | COLOR DESIGNS | COLOR DESIGNS | COLOR DESIGNS | */
+$primary-bg-color: #1B3C53;
+$secondary-bg-color: #456882;
+$main-font-color: #D2C1B6;
+$call-to-action-color: #F9F3EF;
+$call-to-action-hover: #f9f3efdc;
+
+/* BASIC DESIGNS | BASIC DESIGNS | BASIC DESIGNS | BASIC DESIGNS | */
+$primary-border-radius: 25px;
+$primary-font-family: "Noto Sans JP", serif;
+$text-font-family: "Raleway", sans-serif;
+
+@mixin section-settings() {
+    max-width: 1200px;
+    display: flex;
+    color: $call-to-action-color;
+    font-family: $primary-font-family;
+    font-weight: 300;
+    padding: 0 2rem;
+    align-items: center;
+}
+
+@mixin button-design() {
+    font-family: $primary-font-family;
+    color: $primary-bg-color;
+    background-color: $call-to-action-color;
+    border-radius: $primary-border-radius;
+    font-weight: 600;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    background-color: $primary-bg-color;
+    cursor: url("images/arrow.png") 0 0, auto;
+}
+
+body {
+    margin: 0;
+}
+
+.fingerprint-reader {
+    position: fixed;
+    width: 55px;
+    bottom: 40px;
+    left: 40px;
+}
+
+.top-menu {
+    @include section-settings();
+    font-weight: 300;
+    font-size: 1.25rem;
+    margin: 1rem auto 6rem auto;
+    .logo-img {
+        width: 80px;
+    }
+    .top-menu a:hover {
+        cursor: URL("images/pointer.png") 16 0, pointer;
+    }
+    .header-nav {
+        display: flex;
+        list-style: none;
+        gap: 20px;
+        margin: 0 auto 0 auto;
+        padding: 0;
+        li a {
+            text-decoration: none;
+            text-align: center;
+            color: inherit;
+            position: relative;
+        }
+        li a:hover {
+            cursor: url("images/pointer.png") 16 0, auto;
+        }
+        li a::before,
+        li a::after {
+            content: " ";
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            height: 2px;
+            width: 100%;
+            background: linear-gradient(to right, #D2C1B6, #456882);
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform .4s ease-out;
+        }
+        li a::after {
+            transform-origin: left;
+            top: -2px;
+        }
+        li a:hover::before,
+        li a:hover::after {
+            transform: scaleX(1);
+        }
+    }
+    .login-with-id {
+        @include button-design();
+        border: none;
+        padding: 12px 15px;
+        transition: transform .15s ease;
+        &:hover {
+            cursor: url("images/pointer.png") 0 0, auto;
+            background-color: $call-to-action-hover;
+        }
+        &:active {
+            transform: scale(0.95);
+        }
+    }
+    .hamburger-menu {
+        display: none;
+    }
+}
+
+/* LOGIN SECTION START HERE | LOGIN SECTION START HERE | LOGIN SECTION START HERE | */
+
+.login-section-logged-out {
+    @include section-settings();
+    color: $main-font-color;
+    justify-content: space-between;
+    margin: 0 auto 7rem auto;
+    .login-form-container {
+        width: 250px;
+        .call-to-login {
+            margin: 0;
+        }
+        form input {
+            height: 40px;
+            font-family: $text-font-family;
+            font-weight: 450;
+            font-size: 1rem;
+            color: $main-font-color;
+            padding-left: 5px;
+            border: none;
+            border-bottom: 1px solid $main-font-color;
+            background-color: transparent;
+        }
+        .login-input-field {
+            width: 100%;
+            margin-top: 1rem;
+        }
+        input:focus {
+            outline: none;
+            caret-shape:block;
+        }
+        input:hover {
+            cursor: url("images/text-box.png") 16 16, auto;
+        }
+        input::placeholder {
+            color: $main-font-color;
+            font-family: $text-font-family;
+            font-weight: 350;
+        }
+        .landing-login-button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 1rem auto 0 auto;
+            width: 100%;
+            border-radius: 5px;
+            height: 30px;
+            cursor: url("images/pointer.png") 0 0, pointer;
+        }
+    }
+    .login-graphics {
+        height: 430px;
+    }
+}
+
+/* VOTE SECTION START HERE | VOTE SECTION START HERE | VOTE SECTION START HERE | */
+
+.vote-section-pinned {
+    max-width: 1200px;
+    margin: 0 auto 7rem auto;
+    padding: 0 2rem;
+    .vote-title {
+        font-size: 3.5rem;
+        margin-bottom: 0;
+        color: $main-font-color;
+    }
+    .vote-topic {
+        font-size: 1.5rem;
+        margin: 15px 0 25px 0;
+        color: $call-to-action-color;
+    }
+    .petition-button {
+        @include button-design();
+        text-decoration: none;
+        padding: 7px 30px;
+        cursor: url(images/pointer.png) 16 0, pointer;
+        &:hover {
+            background-color: $call-to-action-hover;
+        }
+    }
+}
+
+/* FOOTER STARTS HERE | FOOTER STARTS HERE | FOOTER STARTS HERE | FOOTER STARTS HERE | */
+
+.legal-list {
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin: 0 auto;
+    padding-bottom: 1.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    &::before {
+        content: " ";
+        height: 2px;
+        width: 100%;
+        background-color: $main-font-color;
+        position: absolute;
+        top: -25px;
+        left: 0;
+    }
+    a {
+        font-family: $primary-font-family;
+        color: $main-font-color;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+@media screen and (max-width: 945px) {
+
+    .top-menu {
+        justify-content: space-between;
+        .header-nav {
+            display: none;
+        }
+        .hamburger-menu {
+            display: block;
+            span {
+                display: block;
+                background-color: $call-to-action-color;
+                height: 3px;
+                width: 30px;
+                margin: 5px 0;
+            }
+            &:hover {
+                cursor: url("images/pointer.png") 0 0, pointer;
+            }
+        }
+    }
+
+    .fingerprint-reader-anchor {
+        display: none;
+    }
+
+    .login-section-logged-out {
+        flex-direction: column;
+        margin-bottom: 1rem;
+        .login-form-container {
+            width: 100%;
+            margin-bottom: 2rem;
+            .call-to-login {
+                font-size: 1.45rem;
+            }
+            input:focus {
+                caret-shape: auto;
+            }
+        }
+        .login-graphics {
+            height: 250px;
+        }
+    }
+
+    .legal-list {
+        flex-direction: column;
+        gap: 7px;
+        align-items: center;
+    }
+
+    .login-with-id {
+        display: none;
+    }
+}
