@@ -5,7 +5,7 @@
 }
 
 html {
-  background-color: #1B3C53;
+  background-color: #1B3C53 !important;
   cursor: url("images/arrow.png") 0 0, auto;
 }
 
@@ -28,15 +28,22 @@ body {
   font-weight: 300;
   padding: 0 2rem;
   align-items: center;
+  background-color: #1B3C53;
   font-weight: 300;
   font-size: 1.25rem;
   margin: 1rem auto 6rem auto;
 }
+.top-menu a {
+  display: flex;
+}
 .top-menu .logo-img {
   width: 80px;
 }
-.top-menu .top-menu a:hover {
-  cursor: URL("images/pointer.png") 16 0, pointer;
+.top-menu .logo-img:hover {
+  cursor: url("/images/pointer.png") 16 0, pointer !important;
+}
+.top-menu a:hover {
+  cursor: url("/images/pointer.png") 16 0, pointer;
 }
 .top-menu .header-nav {
   display: flex;
@@ -52,7 +59,7 @@ body {
   position: relative;
 }
 .top-menu .header-nav li a:hover {
-  cursor: url("images/pointer.png") 16 0, auto;
+  cursor: url("/images/pointer.png") 16 0, auto;
 }
 .top-menu .header-nav li a::before,
 .top-menu .header-nav li a::after {
@@ -105,6 +112,7 @@ body {
   font-weight: 300;
   padding: 0 2rem;
   align-items: center;
+  background-color: #1B3C53;
   color: #D2C1B6;
   justify-content: space-between;
   margin: 0 auto 7rem auto;
@@ -218,6 +226,18 @@ body {
 }
 .legal-list a:hover {
   text-decoration: underline;
+}
+
+.vote-section-pinned .head-line {
+  color: #D2C1B6;
+  max-width: 600px;
+}
+.vote-section-pinned .head-line .head-line-title {
+  margin: 0;
+}
+.vote-section-pinned .head-line .head-line-text {
+  color: rgba(249, 243, 239, 0.862745098);
+  margin: 0;
 }
 
 @media screen and (max-width: 945px) {
