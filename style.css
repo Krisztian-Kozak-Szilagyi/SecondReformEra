@@ -1,5 +1,12 @@
 /* COLOR DESIGNS | COLOR DESIGNS | COLOR DESIGNS | COLOR DESIGNS | */
 /* BASIC DESIGNS | BASIC DESIGNS | BASIC DESIGNS | BASIC DESIGNS | */
+.login-success {
+  color: rgb(44, 199, 44);
+  display: flex;
+  justify-content: center;
+  margin-top: 45vh;
+}
+
 * {
   box-sizing: border-box;
 }
