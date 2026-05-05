@@ -49,10 +49,11 @@
     <section class="login-section-logged-out">
         <div class="login-form-container">
             <h1 class="call-to-login">Login with your national ID</h1>
-            <form action="/login" method="POST">
+            <form>
                 <input type="text" id="national-ID" name="national-ID" class="login-input-field" placeholder="National ID" required>
                 <input type="password" name="password" id="password" class="login-input-field" placeholder="Password" required>
-                <button type="submit" class="login-with-id landing-login-button">Login</button>
+                <button type="button" class="login-with-id landing-login-button">Login</button>
+                <p id="loginAttempt"></p>
             </form>
         </div>
         <img src="images/news-politics.png" class="login-graphics" alt="graphics design, woman reading the news">
