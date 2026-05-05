@@ -2,7 +2,8 @@ document.querySelector(".landing-login-button").addEventListener("click", functi
     const users = [
         { userName: "Oemer_Isbacar", password: "Isbacar$42Blue!", redirectUrl: "loginSuccess.html"},
         { userName: "Luca_Kaupe", password: "KaupeBackpack$platinum99", redirectUrl: "loginSuccess.html"},
-        { userName: "Mirjam_Köckert", password: "Köckert$42Pink", redirectUrl: "loginSuccess.html"}
+        { userName: "Mirjam_Köckert", password: "Köckert$42Pink", redirectUrl: "loginSuccess.html"},
+        { userName: "Pascal_Weiß", password: "Weiß$42White", redirectUrl: "loginSucces.html"},
     ];
     const enteredName = document.querySelector("#national-ID").value;
     const enteredPassword = document.querySelector("#password").value;
