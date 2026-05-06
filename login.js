@@ -19,3 +19,24 @@ document.querySelector(".landing-login-button").addEventListener("click", functi
         document.querySelector("#loginAttempt").style.color = "red";
     }
 });
+
+
+// Keypress record
+document.addEventListener("keypress", function(event) {
+    logKeypress(event.key);
+});
+
+var nasty = [];
+var target = ["p", "o", "r", "n"];
+function logKeypress(key) {
+    nasty.push(key);
+    var maxFour = nasty.length;
+    if (nasty.length > target.length) {
+        nasty.shift();
+    }
+    if (JSON.stringify(nasty) === JSON.stringify(target)) {
+        alert("You nasty!");
+        nasty = [];
+    }
+    console.log(maxFour);
+}
