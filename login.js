@@ -1,4 +1,5 @@
 document.querySelector(".landing-login-button").addEventListener("click", function loginAuthentication() {
+    // User data should be moved to Postgre
     const users = [
         { userName: "Oemer_Isbacar", password: "Isbacar$42Blue!", redirectUrl: "loginSuccess.html"},
         { userName: "Luca_Kaupe", password: "KaupeBackpack$platinum99", redirectUrl: "loginSuccess.html"},
