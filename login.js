@@ -1,3 +1,4 @@
+// I should just rework the whole project from scratch ...
 document.querySelector(".landing-login-button").addEventListener("click", function loginAuthentication() {
     // User data should be moved to Postgre
     const users = [
